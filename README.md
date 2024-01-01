@@ -5,20 +5,20 @@ This is being offered as a "best effort" replication to support anybody who woul
 
 
 ## Releases
-The data will be mirrored into the BigQuery on a best-effort basis so might lag behind the releases found from both sources.
+The data will be mirrored into the BigQuery datasets on a best-effort basis; for example the availability of new version's within this dataset could lag behind the releases found from both sources.
 
 ## What is BigQuery?
 Bigquery is a managed data warehouse from the Google Cloud platform; the official documentation can be found [here](https://cloud.google.com/bigquery) . There can be costs from Google Cloud when consuming this data; it is advisable to checkout the [pricing page](https://cloud.google.com/bigquery/pricing) before consuming.
 
 ## Contents
 ### Release Version Identifiers
-The release version identifiers are based on the IANA timezone release identifiers, today this is in the format of `YYYYx`; for example `2023d`.
+The release version identifiers are based on the IANA timezone release identifiers, today this is in the format of `YYYYx`, for example `2023d`.
 
 ### EU vs US
 All data is replicated into both the EU and US [Multi Regions](https://cloud.google.com/bigquery/docs/locations#multi-regions). The datasets all have a suffix to represent which region the data is stored within. Both regions contain all global data and are provided as a convenience to the consumer.
 
 ### Latest Version
-Two datasets which will contain the most recent version for each table. It could be that the tables from each source has a different latest version.
+Two datasets contain the most recent released version for each table. It could be that the difference sources have a different latest version as each source is updated independently. Each table within the latest datasets has a column showing the current version.
 
 There are some more technical tables (such as raw JSON tables) that are not available within the latest version and need to be sourced per version; this is to ensure that the latest tables and content are stable (where-as source JSON *might* change.
 
@@ -27,11 +27,13 @@ There are some more technical tables (such as raw JSON tables) that are not avai
 | tz-data         | [latest_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=latest_EU&t=timezones) | [latest_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=latest_US&t=timezones) | 2023d | 2023d |
 
 ### Version Datasets
-Alternatively to the latest version, previous versions are kept as a historical record and to ensure you can migrate to the next version at your own pace.
+As an alternative to the latest version datasets, previous versions are kept as a historical record and to ensure you can migrate to the next version at your own pace. The sources have many years of history; however we are starting from the 2023 releases.
 | Version | Dataset Project | EU Dataset | US Dataset | Has tzdb | Has Boundary |
 |---------|-----------------|------------|------------|----------|--------------|
 | 2023d   | tz-data         | [release_2023d_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023d_EU&t=timezones) | [release_2023d_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023d_US&t=timezones) |     Y    |       Y      |
+| 2023c   | tz-data         | [release_2023c_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023c_EU&t=timezones) | [release_2023c_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023c_US&t=timezones) |     Y    |              |
 | 2023b   | tz-data         | [release_2023b_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023b_EU&t=timezones) | [release_2023b_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023b_US&t=timezones) |     Y    |       Y      |
+| 2023a   | tz-data         | [release_2023a_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023a_EU&t=timezones) | [release_2023a_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023a_US&t=timezones) |     Y    |              |
 
 ### Detailed Contents
 Here is a list of the tables currently available. Unless otherwise mentioned the schema of these tables is the same across versions. For more detailed descriptions of the contents I would suggest reading the documentation from the source directly.

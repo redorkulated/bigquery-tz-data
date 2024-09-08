@@ -24,17 +24,18 @@ There are some more technical tables (such as raw JSON tables) that are not avai
 
 | Dataset Project | EU Dataset | US Dataset | tzdb version | Boundary version |
 |-----------------|------------|------------|--------------|------------------|
-| tz-data         | [latest_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=latest_EU&t=timezones) | [latest_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=latest_US&t=timezones) | 2023d | 2023d |
+| tz-data         | [latest_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=latest_EU) | [latest_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=latest_US) | 2024b | 2024a |
 
 ### Version Datasets
 As an alternative to the latest version datasets, previous versions are kept as a historical record and to ensure you can migrate to the next version at your own pace. The sources have many years of history; however we are starting from the 2023 releases.
 | Version | Dataset Project | EU Dataset | US Dataset | Has tzdb | Has Boundary |
 |---------|-----------------|------------|------------|----------|--------------|
-| 2024a   | tz-data         | [release_2024a_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2024a_EU&t=timezones) | [release_2024a_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2024a_US&t=timezones) |     Y    |       Y      |
-| 2023d   | tz-data         | [release_2023d_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023d_EU&t=timezones) | [release_2023d_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023d_US&t=timezones) |     Y    |       Y      |
-| 2023c   | tz-data         | [release_2023c_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023c_EU&t=timezones) | [release_2023c_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023c_US&t=timezones) |     Y    |              |
-| 2023b   | tz-data         | [release_2023b_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023b_EU&t=timezones) | [release_2023b_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023b_US&t=timezones) |     Y    |       Y      |
-| 2023a   | tz-data         | [release_2023a_EU](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023a_EU&t=timezones) | [release_2023a_US](https://console.cloud.google.com/bigquery?page=table&p=tz-data&d=release_2023a_US&t=timezones) |     Y    |              |
+| 2024b   | tz-data         | [release_2024b_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2024b_EU) | [release_2024b_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2024b_US) |     Y    |              |
+| 2024a   | tz-data         | [release_2024a_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2024a_EU) | [release_2024a_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2024a_US) |     Y    |       Y      |
+| 2023d   | tz-data         | [release_2023d_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023d_EU) | [release_2023d_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023d_US) |     Y    |       Y      |
+| 2023c   | tz-data         | [release_2023c_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023c_EU) | [release_2023c_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023c_US) |     Y    |              |
+| 2023b   | tz-data         | [release_2023b_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023b_EU) | [release_2023b_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023b_US) |     Y    |       Y      |
+| 2023a   | tz-data         | [release_2023a_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023a_EU) | [release_2023a_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2023a_US) |     Y    |              |
 
 ### Detailed Contents
 Here is a list of the tables currently available. Unless otherwise mentioned the schema of these tables is the same across versions. For more detailed descriptions of the contents I would suggest reading the documentation from the source directly.
@@ -114,11 +115,11 @@ ORDER BY
 **Return Value:**
 | place              | lat        | long       | timezone_id                    | utc_time                       | local_time                 |
 |--------------------|------------|------------|--------------------------------|--------------------------------|----------------------------|
-| Buckingham Palace  | 51.500833  | -0.141944  | Europe/London                  | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T08:21:33.747150 |
-| Null Island        | 0.0        | 0.0        |                                | 2023-12-31 08:21:33.747150 UTC |                                |
-| Statue of Liberty  | 40.689167  | -74.044444 | America/New_York               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T03:21:33.747150 |
-| Sydney Opera House | -33.858611 | 151.214167 | Australia/Sydney               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T19:21:33.747150 |
-| Taj Mahal          | 27.175     | 78.041944  | Asia/Kolkata                   | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T13:51:33.747150 |
+| Buckingham Palace  | 51.500833  | -0.141944  | Europe/London                  | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 08:21:33.747150 |
+| Null Island        | 0.0        | 0.0        |                                | 2023-12-31 08:21:33.747150 UTC |                            |
+| Statue of Liberty  | 40.689167  | -74.044444 | America/New_York               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 03:21:33.747150 |
+| Sydney Opera House | -33.858611 | 151.214167 | Australia/Sydney               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 19:21:33.747150 |
+| Taj Mahal          | 27.175     | 78.041944  | Asia/Kolkata                   | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 13:51:33.747150 |
 
 ### Get timezones for multiple places, including the oceans
 Here NULL island returns a timezone, as it within the ocean.
@@ -154,11 +155,11 @@ ORDER BY
 **Return Value:**
 | place              | lat        | long       | timezone_id                    | utc_time                       | local_time                 |
 |--------------------|------------|------------|--------------------------------|--------------------------------|----------------------------|
-| Buckingham Palace  | 51.500833  | -0.141944  | Europe/London                  | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T08:21:33.747150 |
-| Null Island        | 0.0        | 0.0        | Etc/GMT                        | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 08:21:33.747150 UTC |
-| Statue of Liberty  | 40.689167  | -74.044444 | America/New_York               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T03:21:33.747150 |
-| Sydney Opera House | -33.858611 | 151.214167 | Australia/Sydney               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T19:21:33.747150 |
-| Taj Mahal          | 27.175     | 78.041944  | Asia/Kolkata                   | 2023-12-31 08:21:33.747150 UTC | 2023-12-31T13:51:33.747150 |
+| Buckingham Palace  | 51.500833  | -0.141944  | Europe/London                  | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 08:21:33.747150 |
+| Null Island        | 0.0        | 0.0        | Etc/GMT                        | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 08:21:33.747150 |
+| Statue of Liberty  | 40.689167  | -74.044444 | America/New_York               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 03:21:33.747150 |
+| Sydney Opera House | -33.858611 | 151.214167 | Australia/Sydney               | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 19:21:33.747150 |
+| Taj Mahal          | 27.175     | 78.041944  | Asia/Kolkata                   | 2023-12-31 08:21:33.747150 UTC | 2023-12-31 13:51:33.747150 |
 
 
 ## Licenses

@@ -24,13 +24,13 @@ There are some more technical tables (such as raw JSON tables) that are not avai
 
 | Dataset Project | EU Dataset | US Dataset | tzdb version | Boundary version |
 |-----------------|------------|------------|--------------|------------------|
-| tz-data         | [latest_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=latest_EU) | [latest_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=latest_US) | 2026e | 2026e |
+| tz-data         | [latest_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=latest_EU) | [latest_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=latest_US) | 2026f | 2026f |
 
 ### Version Datasets
 As an alternative to the latest version datasets, previous versions are kept as a historical record and to ensure you can migrate to the next version at your own pace. The sources have many years of history; however we are starting from the 2023 releases.
 | Version | Dataset Project | EU Dataset | US Dataset | Has tzdb | Has Boundary |
 |---------|-----------------|------------|------------|----------|--------------|
-| 2026f   | tz-data         | [release_2026f_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026f_EU) | [release_2026f_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026f_US) |     Y    |              |
+| 2026f   | tz-data         | [release_2026f_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026f_EU) | [release_2026f_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026f_US) |     Y    |       Y      |
 | 2026e   | tz-data         | [release_2026e_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026e_EU) | [release_2026e_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026e_US) |     Y    |       Y      |
 | 2026d   | tz-data         | [release_2026d_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026d_EU) | [release_2026d_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026d_US) |     Y    |       Y      |
 | 2026c   | tz-data         | [release_2026c_EU](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026c_EU) | [release_2026c_US](https://console.cloud.google.com/bigquery?page=dataset&p=tz-data&d=release_2026c_US) |     Y    |       Y      |
